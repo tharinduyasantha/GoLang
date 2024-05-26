@@ -1,11 +1,10 @@
 package main
 
-import "fmt"
-
 func main() {
-	card := newCard()
-	fmt.Println(card)
-	printState()
+	card := deck{newCard(), "b"}
+	card = append(card, "new string")
+	//fmt.Println(card)
+	card.print()
 }
 
 func newCard() string {
